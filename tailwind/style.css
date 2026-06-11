@@ -74,16 +74,20 @@
 }
 
 :root {
-    --swiper-theme-color   : #ffffff;
-    --bg-semi-gold         : #e3c795;
-    --bg-darken-gold       : #9c8962;
-    --bg-dark              : #0d0d0d;
-    --luxurygoldbackground : linear-gradient(135deg,#3d2a00 0%,#7a5c00 15%,#d4af37 35%,#ffd700 50%,#f8e08e 65%,#c89b3c 80%,#4a3200 100%);
-    --PremiumMetallicGold  : linear-gradient(145deg,#2b1d00 0%,#8c6a00 20%,#ffdf6b 45%,#fff4c7 50%,#ffdf6b 55%,#b8860b 80%,#3a2800 100%);
-    --LuxuryBlackGold      : linear-gradient(135deg,#0f0f0f 0%,#2b1d00 20%,#b8860b 45%,#ffd700 60%,#b8860b 75%,#1a1a1a 100%);
-    --bg-gold              : linear-gradient(120deg,#3d2a00,#b8860b,#fff4c7,#ffd700,#b8860b,#3d2a00);
-    --custom-gold          : linear-gradient(135deg,#1a1a1a,#5c4300,#d4af37,#fff2b2,#d4af37, #5c4300,#1a1a1a);
-    --custom-shadow        :  inset 0 0 80px rgba(255, 215, 0, 0.15),0 0 40px rgba(255, 215, 0, 0.25);
+    --swiper-theme-color: #ffffff;
+    --bg-semi-gold: #e3c795;
+    --bg-darken-gold: #9c8962;
+    --bg-dark: #0d0d0d;
+    --bg-footer: 0f0f0f;
+    --luxurygoldbackground: linear-gradient(135deg, #3d2a00 0%, #7a5c00 15%, #d4af37 35%, #ffd700 50%, #f8e08e 65%, #c89b3c 80%, #4a3200 100%);
+    --PremiumMetallicGold: linear-gradient(145deg, #2b1d00 0%, #8c6a00 20%, #ffdf6b 45%, #fff4c7 50%, #ffdf6b 55%, #b8860b 80%, #3a2800 100%);
+    --LuxuryBlackGold: linear-gradient(135deg, #0f0f0f 0%, #2b1d00 20%, #b8860b 45%, #ffd700 60%, #b8860b 75%, #1a1a1a 100%);
+    --bg-gold: linear-gradient(120deg, #3d2a00, #b8860b, #fff4c7, #ffd700, #b8860b, #3d2a00);
+    --custom-gold: linear-gradient(135deg, #1a1a1a, #5c4300, #d4af37, #fff2b2, #d4af37, #5c4300, #1a1a1a);
+    --custom-shadow: inset 0 0 80px rgba(255, 215, 0, 0.15), 0 0 40px rgba(255, 215, 0, 0.25);
+    --modal-shadow: 20px 9px 20px 6px #00000078, -20px 19px 20px 20px #00000036;
+    --modal-shadower: 0 0 80px rgba(255, 215, 0, 0.15), 0 0 40px rgba(255, 215, 0, 0.25);
+    --golden-button: linear-gradient(0deg, #db8f0c, #ffc301, #eba306);
 }
 
 html,
@@ -97,11 +101,84 @@ body {
     font-weight: 400;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+/* humburger menu  */
+
+/* Menu Button 3 */
+.btn-3 {
+    height: 32px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.btn-3 span,
+.btn-3 span::before,
+.btn-3 span::after {
+    background: var(--bg-semi-gold);
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    margin-top: 13px;
+
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(deg);
+    transform: rotate(180deg);
+
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.btn-3 span::before {
+    margin-top: -12px;
+}
+
+.btn-3 span::after {
+    margin-top: 12px;
+}
+
+.btn-3.active span {
+    background: transparent;
+}
+
+.btn-3.active span::before {
+    margin-top: 0;
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn-3.active span::after {
+    transform: rotate(-45deg);
+    margin-top: 0;
+}
+
+/* Menu Button 3 */
 /* swiper */
 
-
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.52rem;
+    font-weight: 800;
+}
 
 .swiper {
     width: 100%;
@@ -109,9 +186,6 @@ body {
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #444;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,10 +199,6 @@ body {
 }
 
 /* End swiper */
-.mobile-header {
-    display: flex;
-    padding: 1rem;
-}
 
 .gold-text {
     background: linear-gradient(to right, #6d4517, #c59a4a);
@@ -147,8 +217,9 @@ body {
 
 .mobile-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    padding: 1rem;
 }
 
 img {
@@ -169,30 +240,477 @@ header .active {
     position: fixed;
     width: 100%;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     background: var(--bg-gold);
     background-size: 300% 300%;
     animation: goldenshine 8s ease infinite;
-    top:0;
+    top: 0;
     right: 0;
     cursor: pointer;
+    z-index: 4;
+    display: none;
 }
+
+.modal.open {
+    display: flex;
+}
+
+.modal-closer {
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+    z-index: 6;
+    cursor: pointer;
+    animation: closer 2s ease-in-out infinite;
+}
+
+@keyframes closer {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.mobileinput {
+    border-bottom: 1px solid white;
+    color: white;
+    width: 100%;
+    text-align: center;
+    min-height: 2rem;
+}
+
+.mobileinput input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.small-headint {
+    font-size: 1rem;
+}
+
 @keyframes goldenshine {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
+
 .modal-body {
     width: 50%;
     border-radius: 20px;
     background-color: var(--bg-dark);
-    box-shadow: var(--custom-shadow);
+    box-shadow: var(--modal-shadow);
     overflow: hidden;
 }
 
+.golden-btn {
+    background: var(--golden-button);
+    color: var(--bg-dark);
+    display: block;
+    margin-top: 3.5rem;
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#validationCode {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.hiro-box-heading {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.hiro-box-heading::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+
+    /* Make the background 200% wide so it has room to move */
+    background: linear-gradient(90deg,
+            #6e4f00,
+            #ffd700,
+            #fff7cc,
+            #c79a2e,
+            #6e4f00
+            /* Loop back to the start color for a smooth transition */
+        );
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Point to the correct animation name */
+    animation: luxuryGold 10s linear infinite;
+}
+
+@keyframes luxuryGold {
+
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.hiro-box-text {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.desktop-header {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    z-index: 5;
+    background-color: black;
+    line-height: 2.5rem;
+    top: 0;
+    transform: translate(-120rem, 0);
+    transition: 500ms;
+
+}
+
+.desktop-header.open {
+    transform: translate(0, 0);
+    transition: 500ms;
+}
+
+.humburgur {
+    z-index: 6;
+    position: fixed;
+    top: 1.3rem;
+    left: 2rem;
+}
+
+.desktop-header a {
+    color: white;
+}
+
+.simple-golden-text {
+    color: var(--bg-semi-gold);
+}
+
+.inheader-rounded {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-position: 70% 50%;
+    background-color: rgba(0, 0, 0, 0.819);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--bg-semi-gold);
+    border-radius: 20px;
+    padding: 1rem;
+
+}
+
+.ounline-gold {
+    border: 2px solid var(--bg-semi-gold);
+    border-radius: 20px;
+    padding: 1rem;
+    color: white;
+}
+
+.golden-border {
+    border: 2px solid var(--bg-semi-gold);
+    border-radius: 20px;
+}
+
+.up-down-golden-line {
+    color: white;
+    line-height: 2rem;
+    position: relative;
+}
+
+.abs-cardbody {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--bg-semi-gold);
+}
+
+.abs-cardbody .card-body {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+    padding: 2rem 1rem 1rem 1rem;
+    color: white;
+    background: linear-gradient(360deg, #141414 86%, #1c1c1c00 97%);
+    height: auto;
+
+}
+
+/* stars */
+/*  
+ *  Pure CSS star rating that works without reversing order
+ *  of inputs
+ *  -------------------------------------------------------
+ *  NOTE: For the styling to work, there needs to be a radio
+ *        input selected by default. There also needs to be a
+ *        radio input before the first star, regardless of
+ *        whether you offer a 'no rating' or 0 stars option
+ *  
+ *  This codepen uses FontAwesome icons
+ */
+[aria-label="No rating"] {
+    visibility: visible;
+    opacity: 0;
+}
+
+.rating-group {
+    transform: scale(0.5) translate(0, -11px);
+    ;
+}
+
+/* #full-stars-example { */
+/* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+/* make hover effect work properly in IE */
+/* hide radio inputs */
+/* set icon padding and size */
+/* set default star color */
+/* set color of none icon when unchecked */
+/* if none icon is checked, make it red */
+/* if any input is checked, make its following siblings grey */
+/* make all stars orange on rating group hover */
+/* make hovered input's following siblings grey on hover */
+/* make none icon grey on rating group hover */
+/* make none icon red on hover */
+/* } */
+
+#full-stars-example .rating-group {
+    display: inline-flex;
+}
+
+#full-stars-example .rating__icon {
+    pointer-events: none;
+}
+
+#full-stars-example .rating__input {
+    /* position: absolute !important;
+  left: -9999px !important; */
+    opacity: 0;
+}
+
+#full-stars-example .rating__label {
+    cursor: pointer;
+    padding: 0 0.1em;
+    font-size: 2rem;
+}
+
+#full-stars-example .rating__icon--star {
+    color: orange;
+}
+
+#full-stars-example .rating__icon--none {
+    color: #eee;
+}
+
+#full-stars-example .rating__input--none:checked+.rating__label .rating__icon--none {
+    color: red;
+}
+
+#full-stars-example .rating__input:checked~.rating__label .rating__icon--star {
+    color: #ddd;
+}
+
+#full-stars-example .rating-group:hover .rating__label .rating__icon--star {
+    color: orange;
+}
+
+#full-stars-example .rating__input:hover~.rating__label .rating__icon--star {
+    color: #ddd;
+}
+
+#full-stars-example .rating-group:hover .rating__input--none:not(:hover)+.rating__label .rating__icon--none {
+    color: #eee;
+}
+
+#full-stars-example .rating__input--none:hover+.rating__label .rating__icon--none {
+    color: red;
+}
+
+#half-stars-example {
+    /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+    /* make hover effect work properly in IE */
+    /* hide radio inputs */
+    /* set icon padding and size */
+    /* add padding and positioning to half star labels */
+    /* set default star color */
+    /* set color of none icon when unchecked */
+    /* if none icon is checked, make it red */
+    /* if any input is checked, make its following siblings grey */
+    /* make all stars orange on rating group hover */
+    /* make hovered input's following siblings grey on hover */
+    /* make none icon grey on rating group hover */
+    /* make none icon red on hover */
+}
+
+#half-stars-example .rating-group {
+    display: inline-flex;
+}
+
+#half-stars-example .rating__icon {
+    pointer-events: none;
+}
+
+#half-stars-example .rating__input {
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+#half-stars-example .rating__label {
+    cursor: pointer;
+    /* if you change the left/right padding, update the margin-right property of .rating__label--half as well. */
+    padding: 0 0.1em;
+    font-size: 2rem;
+}
+
+#half-stars-example .rating__label--half {
+    padding-right: 0;
+    margin-right: -0.6em;
+    z-index: 2;
+}
+
+#half-stars-example .rating__icon--star {
+    color: orange;
+}
+
+#half-stars-example .rating__icon--none {
+    color: #eee;
+}
+
+#half-stars-example .rating__input--none:checked+.rating__label .rating__icon--none {
+    color: red;
+}
+
+#half-stars-example .rating__input:checked~.rating__label .rating__icon--star {
+    color: #ddd;
+}
+
+#half-stars-example .rating-group:hover .rating__label .rating__icon--star,
+#half-stars-example .rating-group:hover .rating__label--half .rating__icon--star {
+    color: orange;
+}
+
+#half-stars-example .rating__input:hover~.rating__label .rating__icon--star,
+#half-stars-example .rating__input:hover~.rating__label--half .rating__icon--star {
+    color: #ddd;
+}
+
+#half-stars-example .rating-group:hover .rating__input--none:not(:hover)+.rating__label .rating__icon--none {
+    color: #eee;
+}
+
+#half-stars-example .rating__input--none:hover+.rating__label .rating__icon--none {
+    color: red;
+}
+
+/* #full-stars-example-two { */
+/* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+/* make hover effect work properly in IE */
+/* hide radio inputs */
+/* hide 'none' input from screenreaders */
+/* set icon padding and size */
+/* set default star color */
+/* if any input is checked, make its following siblings grey */
+/* make all stars orange on rating group hover */
+/* make hovered input's following siblings grey on hover */
+/* } */
+#full-stars-example-two .rating-group {
+    display: inline-flex;
+}
+
+#full-stars-example-two .rating__icon {
+    pointer-events: none;
+}
+
+#full-stars-example-two .rating__input {
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+#full-stars-example-two .rating__input--none {
+    display: none;
+}
+
+#full-stars-example-two .rating__label {
+    cursor: pointer;
+    padding: 0 0.1em;
+    font-size: 2rem;
+}
+
+#full-stars-example-two .rating__icon--star {
+    color: orange;
+}
+
+#full-stars-example-two .rating__input:checked~.rating__label .rating__icon--star {
+    color: #ddd;
+}
+
+#full-stars-example-two .rating-group:hover .rating__label .rating__icon--star {
+    color: orange;
+}
+
+#full-stars-example-two .rating__input:hover~.rating__label .rating__icon--star {
+    color: #ddd;
+}
+
+/* End Stars */
+.on-ad-div {
+    background: linear-gradient(90deg, #000 0%, #000 25%, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0.6) 55%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.1) 85%, transparent 100%);
+}
+
+.mobile-app {
+    background: url("../images/mobile-add-m.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 @media (min-width:768px) {
+    .md\:.rtl {
+        direction: rtl;
+    }
+
+    .md\:.ltr {
+        direction: ltr;
+    }
+
     .mobile-header {
         display: none;
     }
@@ -202,20 +720,21 @@ header .active {
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
-
+        position: static;
+        height: auto;
+        line-height: 1rem;
+        transform: translate(0, 0);
     }
 
-    .desktop-header a {
-        color: white;
-    }
 
     .desktop-header nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 80%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
+        font-size: 0.8rem;
     }
 
     .header-first {
@@ -247,14 +766,18 @@ header .active {
     }
 
     .menu a {
-        padding: 2rem 1rem;
+        padding: 2rem 0.2rem;
     }
 
-    #loginmobile h2 {
+    .loginSwiper h2 {
         font-weight: 800;
         line-height: 3rem;
         font-size: 3rem;
         margin-bottom: 2rem;
+    }
+
+    .loginSwiper img {
+        border-radius: 20px;
     }
 
     .loginSwiper .swiper-pagination-bullet {
@@ -265,4 +788,95 @@ header .active {
     }
 
     .modal-body {}
+
+    .hiro-box-heading {
+        font-size: 2rem;
+        font-weight: 900;
+        line-height: 2;
+        position: relative;
+        display: inline-block;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+    .abs-cardbody {
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        border: none;
+    }
+
+    .abs-cardbody .card-body {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        right: 0;
+        padding: 2rem 1rem 1rem 1rem;
+        color: white;
+        background: linear-gradient(360deg, #141414 86%, #1c1c1c00 97%);
+        height: 50%;
+    }
+
+    .mobile-app {
+        background: url("../images/mobile-add.jpg");
+        background-size: cover;
+    }
+}
+
+
+
+@media (min-width:1440px) {
+
+    .desktop-header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
+    }
+
+    .themenu a {
+        padding: 2rem 1rem;
+    }
+
+    .hiro-box-heading {
+        font-size: 9rem;
+        font-weight: 900;
+        line-height: 9rem;
+        position: relative;
+        display: inline-block;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hiro-box-text {
+        text-align: right;
+    }
+
+    .inheader {
+        transform: translate(0, -5rem);
+    }
+
+    .up-down-golden-line {
+        color: white;
+        line-height: 8rem;
+        position: relative;
+    }
+
+    .up-down-golden-line::after {
+        content: "";
+        background: url("../images/line-art.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 3rem;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        position: absolute;
+    }
+
 }
