@@ -86,7 +86,7 @@ npm install
 ### Start Tailwind Watch Mode
 
 ```bash
-npx @tailwindcss/cli -i ./input.css -o ./output.css --watch
+npx @tailwindcss/cli -i ./tailwind/style.css -o ./assets/css/style.css --watch --minify
 ```
 
 ---
@@ -357,7 +357,7 @@ npm install
 ### اجرای Tailwind در حالت Watch
 
 ```bash
-npx @tailwindcss/cli -i ./input.css -o ./output.css --watch
+npx @tailwindcss/cli -i ./tailwind/style.css -o ./assets/css/style.css --watch --minify
 ```
 
 ---
