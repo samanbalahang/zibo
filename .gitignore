@@ -61,6 +61,7 @@ wordpress/wp-content/ai1wm-backups/
 wordpress/wp-config.php
 wordpress/.env
 .env
+wordpress/wp-content/themes/zibo/node_modules
 
 # --------------------------------------------------
 # Keep Themes and Plugins
