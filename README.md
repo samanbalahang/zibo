@@ -25,7 +25,7 @@ Zibo is designed to provide a premium experience for salon owners, beauty expert
 ```text
 repository/
 │
-├── html/
+├── docs/
 │   ├── index.html
 │   ├── assets/
 │   └── node_modules/
@@ -45,7 +45,7 @@ repository/
 
 | Directory                           | Purpose                                         |
 | ----------------------------------- | ----------------------------------------------- |
-| `html/`                             | Frontend development environment and prototypes |
+| `docs/`                             | Frontend development environment and prototypes |
 | `wordpress/`                        | Local WordPress installation                    |
 | `wordpress/wp-content/themes/zibo/` | Main Zibo theme source code                     |
 
@@ -79,7 +79,7 @@ cd zibo
 ### Install Frontend Dependencies
 
 ```bash
-cd html
+cd docs
 npm install
 ```
 
@@ -109,6 +109,10 @@ zibo/
 │   ├── js/
 │   └── images/
 │
+|
+├── tailwind/
+│   └── style.css
+|
 ├── inc/
 │   ├── setup.php
 │   ├── enqueue.php
@@ -134,7 +138,7 @@ zibo/
 Edit files inside:
 
 ```text
-html/
+docs/
 ```
 
 ### Transfer Assets
@@ -145,37 +149,20 @@ Compiled assets should be copied into:
 wordpress/wp-content/themes/zibo/assets/
 ```
 
+## run tialwind for wordpress theme 
+we use tailwind as css framework for use it do 
+
+
+```text
+cd  wordpress/wp-content
+npm install
+npx @tailwindcss/cli -i ./themes\zibo\tailwind\style.css -o ./themes/zibo/assets/css/style.min.css --watch --minify
+```
+
 ### Test Locally
 
 Run WordPress through your local development environment and activate the Zibo theme.
 
----
-
-## Git Workflow
-
-### Check Status
-
-```bash
-git status
-```
-
-### Stage Changes
-
-```bash
-git add .
-```
-
-### Commit
-
-```bash
-git commit -m "Describe your changes"
-```
-
-### Push
-
-```bash
-git push
-```
 
 ---
 
@@ -295,7 +282,7 @@ https://github.com/samanbalahang/wordpressTuts
 ```text
 repository/
 │
-├── html/
+├── docs/
 │   ├── index.html
 │   ├── assets/
 │   └── node_modules/
@@ -315,7 +302,7 @@ repository/
 
 | پوشه                                | توضیحات                            |
 | ----------------------------------- | ---------------------------------- |
-| `html/`                             | محیط توسعه فرانت‌اند و نمونه صفحات |
+| `docs/`                             | محیط توسعه فرانت‌اند و نمونه صفحات |
 | `wordpress/`                        | نصب محلی وردپرس                    |
 | `wordpress/wp-content/themes/zibo/` | سورس اصلی قالب زیبو                |
 
@@ -350,7 +337,7 @@ cd zibo
 ### نصب وابستگی‌های فرانت‌اند
 
 ```bash
-cd html
+cd docs
 npm install
 ```
 
@@ -405,7 +392,7 @@ zibo/
 فایل‌های مربوط به طراحی اولیه و فرانت‌اند در پوشه زیر قرار دارند:
 
 ```text
-html/
+docs/
 ```
 
 ### انتقال فایل‌های خروجی
@@ -421,31 +408,14 @@ wordpress/wp-content/themes/zibo/assets/
 پس از فعال‌سازی قالب در وردپرس، تغییرات را در محیط محلی بررسی و آزمایش کنید.
 
 ---
+# اجرای tailwind در وردپرس
+در این پروژه ما قالب وردپرس خود را براساس فریم ورک tailwind  ساخته اییم برای استفاده کدهای زیر را بکار گیرید
 
-## 🔧 دستورات Git
 
-### مشاهده وضعیت پروژه
-
-```bash
-git status
-```
-
-### افزودن فایل‌ها
-
-```bash
-git add .
-```
-
-### ثبت تغییرات
-
-```bash
-git commit -m "توضیح تغییرات"
-```
-
-### ارسال به GitHub
-
-```bash
-git push
+```text
+cd  wordpress/wp-content
+npm install
+npx @tailwindcss/cli -i ./themes\zibo\tailwind\style.css -o ./themes/zibo/assets/css/style.min.css --watch --minify
 ```
 
 ---
