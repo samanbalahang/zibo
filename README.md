@@ -28,7 +28,7 @@ repository/
 ├── docs/
 │   ├── index.html
 │   ├── assets/
-│   └── node_modules/
+│   └──...
 │
 ├── wordpress/
 │   ├── wp-admin/
@@ -40,6 +40,14 @@ repository/
 ├── .gitignore
 └── README.md
 ```
+---
+# Live Demo
+
+Visit the online demo:
+
+https://samanbalahang.github.io/zibo/
+
+---
 
 ### Directory Description
 
@@ -86,6 +94,8 @@ npm install
 ### Start Tailwind Watch Mode
 
 ```bash
+cd "./wordpress/wp-content/themes/zibo"
+npm install
 npx @tailwindcss/cli -i ./tailwind/style.css -o ./assets/css/style.css --watch --minify
 ```
 
@@ -154,9 +164,9 @@ we use tailwind as css framework for use it do
 
 
 ```text
-cd  wordpress/wp-content
+cd wordpress/wp-content/themes/zibo
 npm install
-npx @tailwindcss/cli -i ./themes\zibo\tailwind\style.css -o ./themes/zibo/assets/css/style.min.css --watch --minify
+npx @tailwindcss/cli -i ./tailwind/style.css -o ./assets/css/style.min.css --watch --minify
 ```
 
 ### Test Locally
@@ -232,14 +242,7 @@ Contributions, suggestions, and bug reports are welcome.
 
 Please create an Issue or Pull Request to contribute to the project.
 
----
-# Live Demo
 
-Visit the online demo:
-
-https://samanbalahang.github.io/zibo/
-
----
 
 ## Support
 
@@ -254,9 +257,12 @@ If you find this project useful:
 🚀 Share the project
 
 
-## full tuts in:
+## Learning Resources
+Documentation:
+Complete WordPress tutorials and development guides:
 
 https://github.com/samanbalahang/wordpressTuts
+
 
 -----------------------------------------------
 
@@ -267,6 +273,14 @@ https://github.com/samanbalahang/wordpressTuts
 یک قالب مدرن وردپرس برای سالن‌های زیبایی، آرایشگران، متخصصان حوزه زیبایی و مارکت‌پلیس‌های چندفروشندگی.
 
 زیبو با هدف ارائه تجربه‌ای حرفه‌ای و لوکس برای صاحبان سالن‌های زیبایی، ارائه‌دهندگان خدمات آرایشی و مدیران مارکت‌پلیس‌ها توسعه داده شده است. این پروژه از ابزارهای مدرن فرانت‌اند و استانداردهای توسعه وردپرس بهره می‌برد.
+
+---
+
+## آموزش کامل در 
+
+آموزش کامل توسعه قالب وردپرسی زیبو برای دانشجویان وردپرس
+
+https://github.com/samanbalahang/wordpressTuts
 
 ---
 
@@ -420,9 +434,9 @@ wordpress/wp-content/themes/zibo/assets/
 
 
 ```text
-cd  wordpress/wp-content
+cd wordpress/wp-content/themes/zibo
 npm install
-npx @tailwindcss/cli -i ./themes\zibo\tailwind\style.css -o ./themes/zibo/assets/css/style.min.css --watch --minify
+npx @tailwindcss/cli -i ./tailwind/style.css -o ./assets/css/style.min.css --watch --minify
 ```
 
 ---
@@ -519,6 +533,3 @@ https://samanbalahang.github.io/zibo/
 🚀 پروژه را با دیگران به اشتراک بگذارید
 
 
-## آموزش کامل در 
-
-https://github.com/samanbalahang/wordpressTuts
