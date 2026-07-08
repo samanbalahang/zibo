@@ -1,0 +1,87 @@
+# Copyright (C) 2026 saman balahang
+# This file is distributed under the same license as the Zibo plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Zibo 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zibo\n"
+"POT-Creation-Date: 2026-06-27T10:10:01+02:00\n"
+"PO-Revision-Date: 2026-06-27 11:53+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+"X-Domain: zibo\n"
+
+#. Plugin Name of the plugin
+#: zibo.php
+msgid "Zibo"
+msgstr "زیبو"
+
+#. Description of the plugin
+#: zibo.php
+msgid "Salon management plugin."
+msgstr "پلاگین مدیریت سالن زیبایی"
+
+#. Author of the plugin
+#: zibo.php
+msgid "saman balahang"
+msgstr "سامان بالاهنگ"
+
+#: includes/class-post-types.php:14 includes/class-post-types.php:16
+msgid "Salons"
+msgstr "سالن‌های زیبایی"
+
+#: includes/class-post-types.php:15
+msgid "Salon"
+msgstr "سالن زیبایی"
+
+#: includes/class-post-types.php:17
+msgid "Add New"
+msgstr "اضافه کردن"
+
+#: includes/class-post-types.php:18
+msgid "Add New Salon"
+msgstr "افزودن سالن"
+
+#: includes/class-post-types.php:19
+msgid "Edit Salon"
+msgstr "ویرایش سالن"
+
+#: includes/class-post-types.php:20
+msgid "New Salon"
+msgstr "سالن جدید"
+
+#: includes/class-post-types.php:21
+msgid "View Salon"
+msgstr "نمایش سالن"
+
+#: includes/class-post-types.php:22
+msgid "Search Salons"
+msgstr "جستجوی سالن"
+
+#: includes/class-post-types.php:23
+msgid "No salons found."
+msgstr "سالنی یافت نشد."
+
+#: includes/class-post-types.php:24
+msgid "No salons found in Trash."
+msgstr "سالنی در سطل بازیافت وجود ندارد."
+
+#: includes/class-settings.php:21
+msgid "General Settings"
+msgstr "تنظیمات اصلی"
+
+#: includes/class-settings.php:28
+msgid "Allow Salon Registration"
+msgstr "اجازه ایجاد سالن"
+
+#: includes/class-settings.php:36
+msgid "Notification Email"
+msgstr "ایمیل اطلاع رسانی"
+
+#: includes/class-user-roles.php:17
+msgid "Salon Owner"
+msgstr "مالک سالن"

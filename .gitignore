@@ -44,6 +44,7 @@ wordpress/readme.html
 wordpress/wp-*.php
 wordpress/xmlrpc.php
 
+
 # --------------------------------------------------
 # WordPress Content
 # --------------------------------------------------
@@ -53,6 +54,8 @@ wordpress/wp-content/upgrade/
 wordpress/wp-content/uploads/
 wordpress/wp-content/backups/
 wordpress/wp-content/ai1wm-backups/
+wordpress/wp-content/plugins/akismet/
+wordpress/wp-content/themes/twentytwentyfive/
 
 # --------------------------------------------------
 # Local Configuration

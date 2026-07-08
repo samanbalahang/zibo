@@ -1,0 +1,87 @@
+# Copyright (C) 2026 saman balahang
+# This file is distributed under the same license as the Zibo plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Zibo 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zibo\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-27T10:10:01+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: zibo\n"
+
+#. Plugin Name of the plugin
+#: zibo.php
+msgid "Zibo"
+msgstr ""
+
+#. Description of the plugin
+#: zibo.php
+msgid "Salon management plugin."
+msgstr ""
+
+#. Author of the plugin
+#: zibo.php
+msgid "saman balahang"
+msgstr ""
+
+#: includes/class-post-types.php:14
+#: includes/class-post-types.php:16
+msgid "Salons"
+msgstr ""
+
+#: includes/class-post-types.php:15
+msgid "Salon"
+msgstr ""
+
+#: includes/class-post-types.php:17
+msgid "Add New"
+msgstr ""
+
+#: includes/class-post-types.php:18
+msgid "Add New Salon"
+msgstr ""
+
+#: includes/class-post-types.php:19
+msgid "Edit Salon"
+msgstr ""
+
+#: includes/class-post-types.php:20
+msgid "New Salon"
+msgstr ""
+
+#: includes/class-post-types.php:21
+msgid "View Salon"
+msgstr ""
+
+#: includes/class-post-types.php:22
+msgid "Search Salons"
+msgstr ""
+
+#: includes/class-post-types.php:23
+msgid "No salons found."
+msgstr ""
+
+#: includes/class-post-types.php:24
+msgid "No salons found in Trash."
+msgstr ""
+
+#: includes/class-settings.php:21
+msgid "General Settings"
+msgstr ""
+
+#: includes/class-settings.php:28
+msgid "Allow Salon Registration"
+msgstr ""
+
+#: includes/class-settings.php:36
+msgid "Notification Email"
+msgstr ""
+
+#: includes/class-user-roles.php:17
+msgid "Salon Owner"
+msgstr ""
