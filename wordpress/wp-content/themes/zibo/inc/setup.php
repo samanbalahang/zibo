@@ -40,8 +40,22 @@ function zibo_setup()
         }
         // 5. Hide the ACF Admin Menu if you want a clean theme experience
         // Remove or comment out this filter if you want users to see the "ACF" menu item
-        // add_filter('acf/settings/show_admin', '__return_false');
+        add_filter('acf/settings/show_admin',function () {
+		    return get_theme_mod( 'zibo_show_acf_admin', false );
+	    });
+
         // 6. Disable ACF update notices (since it's baked into your theme)
         add_filter('acf/settings/show_updates', '__return_false', 100);
     }
+}
+/**
+ * Load ACF JSON files from theme.
+ */
+add_filter('acf/settings/load_json', 'zibo_acf_json_load_point');
+
+function zibo_acf_json_load_point($paths)
+{
+    // Append our theme's acf-json path
+    $paths[] = get_template_directory() . '/acf-json';
+    return $paths;
 }
